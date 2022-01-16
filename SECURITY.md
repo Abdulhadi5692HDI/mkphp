@@ -12,4 +12,4 @@ currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-Go to issues > create new issue > label as bug > title as security alert | <whatever thing>
+Go to issues > create new issue > label as security > title as what the security problem is
