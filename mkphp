@@ -1,32 +1,12 @@
 #!/data/data/com.termux/files/usr/bin/bash
 #!/system/bin/env INIT=true
-app() {
-phar="$phar"
-pharFile="app.phar"
-# mkphp . A tool for initilazing php projects
-# Display warning
-echo "WARNING: This is project is about to run composer. If its not installed hold Ctrl+C"
-sleep 3
-# Starting..
-echo "Arguments parsed: $*"
-
-mkdir $*
-cd $*
-echo "Setup your project with composer"
-echo "
-
-
-"
-echo "  "
-composer init
-echo "Now generating files.."
-mkdir src/
-cd src/
-echo "
-<?php
-// Add anything below'd
-" > main.php
-cd ..
-echo "Done!"
-}
-app $*
+while getopts h:v:i:s: flag
+do
+case "${flag}" in
+h) echo "Usage: mkphp -s <project name> | -v -h -i";;
+v) echo "Copyright Abdulhadi5692HDI, MKPHP version: 1.0.0-2";; 
+i) echo "Args after -i option is : " ${OPTARG};;
+s) sh bin/app.sh ${OPTARG};;
+esac
+done
+# bin/app.sh is the actual app
