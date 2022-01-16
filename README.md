@@ -6,4 +6,5 @@ php (above 7.2)
 composer (latest version)
 
 ## Arguments
-sh mkphp <project name/folder name>
+./mkphp -s <project name> | -v 1 | -h 1 | -i <anything make sure no spaces>
+  
