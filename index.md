@@ -1,6 +1,6 @@
-#MakePHP
+# MakePHP
 
-##Usage:
+## Usage:
 
 ``markdown
 
